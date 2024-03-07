@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden; 
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .image-container img {
+    width: 100%; /* image fill the entire width of its container */
+    height: 100%; /* image fill the entire height of its container */
+    object-fit: cover;
   }
-  to {
-    transform: rotate(360deg);
+  
+
+  .selection-container {
+    display: inline-block;
+    margin-right: 20px; 
   }
-}
+  
+
+  
+  .label {
+    font-weight: bold;
+  }
+  
+  .dropdown {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .dropdown:hover {
+    background-color: #e9e9e9;
+  }
+  
+  .dropdown:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+
+ 
+  @media (max-width: 768px) {
+    .news-container {
+      justify-content: flex-start;
+      width: 85%;
+    }
+  
+    .card {
+      width: calc(50% - 20px); 
+      margin: 10px;
+    }
+  }
+  
